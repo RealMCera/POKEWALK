@@ -7,6 +7,18 @@
 **This project (and wiki) has been superceded by [this article](http://dmitry.gr/?r=05.Projects&proj=28.%20pokewalker) by Dmitry.GR.**
 **This repo has been shelved since the goal it was aiming for has been acheived. See below for active related projects.**
 **Huge thanks again to Dmitry who cracked it all on his own - and thanks to the contributors to this repo.**
+**See below for related projects by me and other people based on the Pokewalker**
+**See also the Discord for the most up to date info on Pokewalker related things**
+
+## Related projects
+
+- [picowalker - a Pokewalker recreation project by mamba2410](https://github.com/mamba2410/picowalker)
+- [NDS Pokewalker ROM dumper by PoroCYon](https://gitlab.ulyssis.org/pcy/pokewalker-rom-dumper)
+- [Pokewalker eeprom (save file) viewer by UnrealPowerz](https://unrealpowerz.github.io/pokewalker-eeprom-editor/)
+- [Lincoln's route injector](https://github.com/Lincoln-LM/pokewalker-course-injector)
+- [jpcerrone's Pokewalker emulator](https://github.com/jpcerrone/pokestroller)
+- [Pokewalker emulator by UnrealPowerz](https://github.com/UnrealPowerz/powar)
+
 
 ----
 
@@ -21,16 +33,9 @@ Join the [Discord server](https://discord.gg/ymbTMsS) for more discussion on the
 
 - We have a full ROM dump of both the internal 48k and external 64k roms courtesy of [this article](http://dmitry.gr/?r=05.Projects&proj=28.%20pokewalker)
 
-
-## Related projects
-
-- [Pokewalker emulator by UnrealPowerz](https://github.com/UnrealPowerz/powar)
-- [NDS Pokewalker ROM dumper by PoroCYon](https://git.titandemo.org/PoroCYon/pokewalker-rom-dumper)
-- [Pokewalker recreation project by mamba2410](https://github.com/mamba2410/pw-lcd)
-
 ----
 
-## References 
+## References
 
 ### Other Discussion on the topic
 1. [GBA Temp forum post](https://gbatemp.net/threads/pokewalker-hacking.419462/)
