@@ -1,0 +1,49 @@
+name: Apple Platform Builds
+
+on:
+  push:
+    branches:
+      - ios-appstore-mvp
+    paths:
+      - "ios/**"
+      - ".github/workflows/ios-build.yml"
+  pull_request:
+    paths:
+      - "ios/**"
+      - ".github/workflows/ios-build.yml"
+
+jobs:
+  build:
+    runs-on: macos-latest
+
+    steps:
+      - uses: actions/checkout@v4
+
+      - name: Install XcodeGen
+        run: brew install xcodegen
+
+      - name: Generate Xcode project
+        working-directory: ios
+        run: xcodegen generate
+
+      - name: Build iPhone app
+        working-directory: ios
+        run: >
+          xcodebuild
+          -project PokeWalk.xcodeproj
+          -scheme PokeWalk
+          -configuration Debug
+          -sdk iphonesimulator
+          CODE_SIGNING_ALLOWED=NO
+          build
+
+      - name: Build Apple Watch app
+        working-directory: ios
+        run: >
+          xcodebuild
+          -project PokeWalk.xcodeproj
+          -scheme PokeWalkWatch
+          -configuration Debug
+          -sdk watchsimulator
+          CODE_SIGNING_ALLOWED=NO
+          build
