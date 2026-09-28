@@ -1,4 +1,4 @@
-name: iOS Build
+name: Apple Platform Builds
 
 on:
   push:
@@ -26,7 +26,7 @@ jobs:
         working-directory: ios
         run: xcodegen generate
 
-      - name: Build for iPhone Simulator
+      - name: Build iPhone app
         working-directory: ios
         run: >
           xcodebuild
@@ -34,5 +34,16 @@ jobs:
           -scheme PokeWalk
           -configuration Debug
           -sdk iphonesimulator
+          CODE_SIGNING_ALLOWED=NO
+          build
+
+      - name: Build Apple Watch app
+        working-directory: ios
+        run: >
+          xcodebuild
+          -project PokeWalk.xcodeproj
+          -scheme PokeWalkWatch
+          -configuration Debug
+          -sdk watchsimulator
           CODE_SIGNING_ALLOWED=NO
           build
